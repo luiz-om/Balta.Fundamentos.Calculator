@@ -6,5 +6,9 @@ float valor1 = float.Parse(Console.ReadLine());
 Console.WriteLine($"Segundo Valor");
 float valor2 = float.Parse(Console.ReadLine());
 
-Console.WriteLine(valor1);
-Console.WriteLine(valor2);
+float resultado = valor1 + valor2;
+
+Console.WriteLine($"O resultado da soma é {resultado}");
+Console.WriteLine($"O resultado da soma é " +(valor1+valor2));
+
+
