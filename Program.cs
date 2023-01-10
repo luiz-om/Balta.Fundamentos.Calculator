@@ -1,10 +1,5 @@
-﻿Soma();
-Thread.Sleep(2000);
-Subtracao();
-Thread.Sleep(2000);
-Divisao();
-Thread.Sleep(2000);
-Multiplicao();
+﻿Menu();
+
 
 static void Soma()
 {
@@ -55,17 +50,51 @@ static void Divisao()
 
 static void Multiplicao()
 {
-Console.Clear();
+    Console.Clear();
 
-Console.WriteLine($"Primeiro Valor");
-float numero1 = float.Parse(Console.ReadLine());
+    Console.WriteLine($"Primeiro Valor");
+    float numero1 = float.Parse(Console.ReadLine());
 
-Console.WriteLine($"Segundo Valor");
-float numero2 = float.Parse(Console.ReadLine());
+    Console.WriteLine($"Segundo Valor");
+    float numero2 = float.Parse(Console.ReadLine());
 
-float resultato = numero1 * numero2;
+    float resultato = numero1 * numero2;
 
-Console.WriteLine($"O resultado da multiplicação é {resultato}");
+    Console.WriteLine($"O resultado da multiplicação é {resultato}");
 
 
+}
+
+static void Menu()
+{
+    Console.WriteLine("""
+    O que deseja fazer?
+    1 - Soma
+    2 - Subtracão
+    3 - Divisão
+    4 - Multiplicação
+    5 - Sair
+    """);
+
+    int opcao = int.Parse(Console.ReadLine());
+
+    switch (opcao)
+    {
+        case 1:
+            Soma();
+            break;
+        case 2:
+            Subtracao();
+            break;
+        case 3: Divisao(); break;
+        case 4: Multiplicao(); break;
+        case 5:
+            System.Environment.Exit(0);
+            break;
+        default:
+            Console.WriteLine($"Opção invalida programa sera fechado.");
+
+            break;
+
+    }
 }
