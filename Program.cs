@@ -1,6 +1,8 @@
 ﻿Soma();
 Thread.Sleep(2000);
 Subtracao();
+Thread.Sleep(2000);
+Divisao();
 
 static void Soma(){
     Console.Clear();
@@ -30,5 +32,19 @@ static void Subtracao(){
 
     float resultado = numero1 + numero2;
     Console.WriteLine($"O resultado da soma é {resultado}");
+}
+
+static void Divisao(){
+    Console.Clear();
+
+Console.WriteLine($"Primeiro valor");
+float numero1 =  float.Parse(Console.ReadLine());
+
+Console.WriteLine($"Segundo Valor");
+float numero2 = float.Parse(Console.ReadLine());
+
+float resultado = numero1/ numero2;
+Console.WriteLine($"O resultado da divisão é {resultado}");
+
 }
 
